@@ -1,0 +1,238 @@
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+@font-face {
+  font-family: "Poppins-400";
+  src: url("../fonts/Poppins-400.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-500";
+  src: url("../fonts/Poppins-500.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-600";
+  src: url("../fonts/Poppins-600.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-700";
+  src: url("../fonts/Poppins-700.ttf");
+}
+
+.container {
+  display: flex;
+}
+
+.introText {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 75px;
+}
+
+.introText h1 {
+  font-family: "Poppins-700";
+  font-size: 48px;
+  line-height: 120%;
+  color: white;
+}
+
+.introText p {
+  font-family: "Poppins-400";
+  font-size: 16px;
+  color: white;
+  margin-top: 0px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  width: 500px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--blue);
+  font-family: "Poppins-700";
+  font-size: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0px 7px 0px hsl(0, 80%, 67%);
+}
+
+.header span {
+  font-family: "Poppins-400";
+}
+
+.form {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 40px;
+  padding-bottom: 30px;
+  background-color: white;
+  box-shadow: 0px 7px 0px hsl(0, 80%, 67%);
+}
+
+.input {
+  padding: 15px;
+  padding-left: 30px;
+  margin-bottom: 20px;
+  border: 1px solid var(--grayish-blue);
+  border-radius: 5px;
+  font-family: "Poppins-600";
+  font-size: 14px;
+  color: var(--dark-blue);
+  opacity: 0.7;
+}
+
+.inputInvalid {
+  padding: 15px;
+  padding-left: 30px;
+  margin-bottom: 20px;
+  border: 1px solid var(--red);
+  border-radius: 5px;
+  font-family: "Poppins-600";
+  font-size: 14px;
+  color: var(--dark-blue);
+  background: url("../images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: right 30px center;
+}
+
+.inputInvalid::placeholder {
+  color: transparent;
+}
+
+.input:focus {
+  opacity: 1;
+  outline: none;
+  border: 1px solid black;
+}
+
+.inputInvalid:focus {
+  opacity: 1;
+  outline: none;
+}
+
+::placeholder {
+  font-family: "Poppins-600";
+  font-size: 14px;
+  color: var(--dark-blue);
+}
+
+.firstErrorIcon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+
+.lastErrorIcon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin-top: 70px;
+}
+
+.emailErrorIcon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin-top: 150px;
+}
+
+.passwordErrorIcon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin-top: 220px;
+}
+
+.form button {
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--green);
+  color: white;
+  font-family: "Poppins-500";
+  box-shadow: 0px 5px 2px hsl(154, 59%, 45%);
+}
+
+.form button:hover {
+  cursor: pointer;
+}
+
+.form p {
+  font-family: "Poppins-400";
+  font-size: 10px;
+  color: var(--grayish-blue);
+  text-align: center;
+  margin-top: 15px;
+}
+
+.form span {
+  font-family: "Poppins-700";
+  color: var(--red);
+}
+
+.form h5 {
+  align-self: flex-end;
+  margin-top: -15px;
+  font-size: 10px;
+  color: var(--red);
+  font-style: italic;
+  font-family: "Poppins-400";
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .introText {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .introText {
+    width: 350px;
+    align-items: center;
+  }
+  .introText h1 {
+    font-size: 28px;
+  }
+  .introText p {
+    width: 320px;
+  }
+  .formContainer {
+    align-items: center;
+  }
+  .header {
+    width: 200px;
+    height: 90px;
+    padding-left: 75px;
+    padding-right: 75px;
+    text-align: center;
+    line-height: 200%;
+  }
+  .form {
+    padding: 30px;
+    width: 290px;
+  }
+}
